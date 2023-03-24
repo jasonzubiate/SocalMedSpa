@@ -1,0 +1,20 @@
+.nav {
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem 0rem 1rem;
+}
+.logo {
+  width: 130px;
+  height: 80px;
+}
+.btn {
+  border: none;
+  background-color: inherit;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+}

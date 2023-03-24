@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import promoimg from "@/public/assets/img/promo.jpeg";
+import Navbar from "@/components/common/Navbar";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -15,8 +17,86 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
+        <Navbar />
+        <div className={styles.hero}>
+          <h1 className={styles.h1}>
+            Boost Your Natural Beauty At The Top Med Spa In West Covina
+          </h1>
+          <button className={styles.btn}>Book Now</button>
+        </div>
+        <div className={`${styles["section"]} ${styles["logo-bg"]}`}>
+          <h2 className={styles.h2}>Welcome</h2>
+          <p className={styles.p}>
+            We are your one-stop destination for all things health, wellness,
+            and aesthetics in West Covina, California. Our mission is to help
+            our clients look and feel their best by providing cutting-edge
+            treatments and personalized care.
+          </p>
+          <p className={styles.p}>
+            Our supervised weight loss program, featuring the revolutionary
+            medication Semaglutide, can help you achieve your weight loss goals
+            in a safe and effective manner. At So Cal Beauty Med Spa, we believe
+            that taking care of yourself should be a fun and enjoyable
+            experience, which is why we strive to create a welcoming and
+            family-like atmosphere.
+          </p>
+          <p className={styles.p}>
+            Whether you are a first-timer or a regular client, we are committed
+            to providing you with the highest quality of care and the best
+            possible results.
+          </p>
+          <p className={styles.p}>
+            Book your appointment with us today and start your journey to a
+            healthier, more beautiful you!
+          </p>
+        </div>
+        <div className={styles.section}>
+          <h2 className={styles.h2}>Mega Sale</h2>
+          <Image className={styles["img-large"]} src={promoimg} alt={"Mega Sale"} />
+        </div>
+        <div className={styles.section}>
+          <h2 className={styles.h2}>Request A Booking</h2>
+          <hr className={styles.hr} />
+          <form className={styles.form} action="">
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"First Name"}
+              name={"fullName"}
+              required
+            />
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"Last Name"}
+              name={"lastName"}
+              required
+            />
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"Email Address"}
+              name={"email"}
+              required
+            />
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"Phone Number"}
+              name={"phone"}
+              required
+            />
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"Message"}
+              name={"message"}
+              required
+            />
+            <button className={styles.btn}>Submit</button>
+          </form>
+        </div>
       </main>
     </>
-  )
+  );
 }

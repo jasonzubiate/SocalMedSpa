@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/assets/images/logo.jpg";
-import Menu from "@/public/assets/images/menu.png"
+import Logo from "@/public/assets/img/Logo.jpg";
+import Menu from "@/public/assets/img/menu.png";
+import styles from "@/styles/Navbar.module.css";
 
 export default function Navbar() {
-	return (
-		<nav>
-			<Link href={"/"}>
-				<Image src={Logo} alt="Home" />
-			</Link>
-		</nav>
-	);
+  return (
+    <nav className={styles.nav}>
+      <Link href={"/"}>
+        <Image className={styles.logo} src={Logo} alt="Home" />
+      </Link>
+      <button className={styles.btn}>
+        <Image className={styles.icon} src={Menu} alt="Menu" />
+      </button>
+    </nav>
+  );
 }
