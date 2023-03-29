@@ -1,91 +1,137 @@
 .hero {
-  height: 590px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(247, 247, 247, 1),
-      rgba(247, 247, 247, 0)
-    ),
-    url("../public/assets/img/spa.jpg");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 4rem;
+	height: 590px;
+	background-image: url("../public/assets/img/hero.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 4rem;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(247, 247, 247, 1) 0%,
+		rgba(247, 247, 247, 0) 100%
+	);
 }
 .h1 {
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  width: 80%;
-  text-align: center;
-  font-weight: 500;
-  margin: 1rem 0rem;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	width: 80%;
+	text-align: center;
+	font-weight: 500;
+	margin: 1rem 0rem;
+	background-color: transparent;
+	color: var(--OFFWHITE);
+	position: relative;
 }
 .btn {
-  background-color: var(--DARKPINK);
-  padding: 10px 15px;
-  color: var(--OFFWHITE);
-  border: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  border-radius: 1.25rem;
+	background-color: var(--DARKPINK);
+	padding: 10px 15px;
+	color: var(--OFFWHITE);
+	border: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	border-radius: 20px;
 }
 .section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 3.25rem;
-  margin-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 3.25rem;
+	margin-bottom: 4rem;
 }
 .logo-bg {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(247, 247, 247, 0.8),
-      rgba(247, 247, 247, 0.8)
-    ),
-    url("../public/assets/img/socalmedspalady.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+	background-image: linear-gradient(
+			to bottom,
+			rgba(247, 247, 247, 0.8),
+			rgba(247, 247, 247, 0.8)
+		),
+		url("../public/assets/img/socalmedspalady.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .h2 {
-  text-transform: uppercase;
-  font-size: 1.125rem;
+	text-transform: uppercase;
+	font-size: 1.125rem;
 }
 .p {
-  text-align: center;
-  color: var(--LIGHTGREY);
-  margin-top: 1rem;
-  font-size: 12px;
-  line-height: 160%;
+	text-align: center;
+	color: var(--LIGHTGREY);
+	margin-top: 1rem;
+	font-size: 12px;
+	line-height: 160%;
 }
 .img-large {
-  width: 320px;
-  height: 320px;
-  margin-top: 1.25rem;
+	width: 320px;
+	height: 320px;
+	margin-top: 1.25rem;
 }
 .hr {
-  width: 50%;
-  border-top: 2px solid var(--DARKPINK);
-  margin-top: .5rem;
-  margin-bottom: 1rem;
+	width: 50%;
+	border-top: 2px solid var(--DARKPINK);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
 }
 .form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 1rem;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+	align-items: center;
 }
 .input {
-  border: 1px solid var(--DARKGREY);
-  height: 40px;
-  width: 100%;
-  padding: 15px 10px;
-  border-radius: 5px;
+	border: 1px solid var(--DARKGREY);
+	height: 40px;
+	width: 100%;
+	padding: 15px 10px;
+	border-radius: 5px;
 }
-.input, .input::placeholder {
-  font: inherit;
-  color: var(--LIGHTGREY);
+.input,
+.input::placeholder {
+	font: inherit;
+	color: var(--LIGHTGREY);
 }
 .input::placeholder {
-  color: #525151;
+	color: #525151;
+}
+@media screen and (min-width: 420px) {
+	.h1 {
+		font-size: 28px;
+	}
+	.h2 {
+		font-size: 26px;
+	}
+	.p {
+		font-size: 16px;
+	}
+	.btn {
+		font-size: 16px;
+		padding: 15px 20px;
+		border-radius: 30px;
+	}
+	.section {
+		width: 50%;
+		margin: auto;
+		margin-bottom: 4rem;
+	}
+	.hero {
+		height: 80vh;
+	}
+	.hr {
+		width: 25%;
+	}
+	.form {
+		width: 70%;
+	}
 }

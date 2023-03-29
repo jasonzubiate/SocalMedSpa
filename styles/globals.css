@@ -7,7 +7,7 @@
   --BLACK: #0d0e0b;
   --DARKGREY: #353535;
   --LIGHTGREY: #525151;
-  --OFFWHITE: #f7f7f7;
+  --OFFWHITE: rgb(247, 247, 247);
 
   /* FONTS */
   --PRIMARYFF: "Montserrat", sans-serif;
