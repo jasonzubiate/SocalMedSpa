@@ -1,0 +1,26 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--DARKGREY);
+	height: 140px;
+  color: var(--OFFWHITE);
+  justify-content: center;
+  padding: 1rem;
+  gap: .5rem;
+}
+.a, .a:visited {
+  color: var(--OFFWHITE);
+  text-decoration: none;
+}
+.no_wrap {
+  white-space: nowrap;
+}
+@media screen and (min-width: 1080px) {
+  .footer {
+    height: 4rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+}
