@@ -131,7 +131,7 @@
 	width: 32px;
 	height: 32px;
 }
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 690px) {
 	.h1 {
 		font-size: 28px;
 	}
