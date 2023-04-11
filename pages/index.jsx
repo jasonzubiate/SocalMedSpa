@@ -5,10 +5,32 @@ import styles from "@/styles/Home.module.css";
 import promoimg from "@/public/assets/img/promo.jpeg";
 import { useRef } from "react";
 import igicon from "@/public/assets/icons/instagram.png";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
 	const ref = useRef(null);
 	const scrollToRef = () => ref.current.scrollIntoView({ behavior: "smooth" });
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_9efmxmg",
+				"template_tojkqmu",
+				e.target,
+				"U4Me_Bn1wNHxFRKCp"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		e.target.reset();
+		setSubmitted(true);
+	};
 
 	return (
 		<>
@@ -31,8 +53,8 @@ export default function Home() {
 					<h2 className={styles.h2}>Welcome</h2>
 					<p className={styles.p}>
 						We are your one-stop destination for all things health, wellness,
-						and aesthetics in Covina, California. Our mission is to help
-						our clients look and feel their best by providing cutting-edge
+						and aesthetics in Covina, California. Our mission is to help our
+						clients look and feel their best by providing cutting-edge
 						treatments and personalized care.
 					</p>
 					<p className={styles.p}>
@@ -64,40 +86,38 @@ export default function Home() {
 				<div className={styles.section}>
 					<h2 className={styles.h2}>Request A Booking</h2>
 					<hr className={styles.hr} />
-					<form className={styles.form} action="" ref={ref}>
+					<form
+						className={styles.form}
+						action=""
+						onSubmit={sendEmail}
+						ref={ref}
+					>
 						<input
 							className={styles.input}
 							type="text"
-							placeholder={"First Name"}
-							name={"fullName"}
-							required
-						/>
-						<input
-							className={styles.input}
-							type="text"
-							placeholder={"Last Name"}
-							name={"lastName"}
+							placeholder={"Full Name"}
+							id="fullName"
 							required
 						/>
 						<input
 							className={styles.input}
 							type="email"
 							placeholder={"Email Address"}
-							name={"email"}
+							id="email_id"
 							required
 						/>
 						<input
 							className={styles.input}
 							type="tel"
 							placeholder={"Phone Number"}
-							name={"phone"}
+							name="phone_id"
 							required
 						/>
 						<input
 							className={styles.input}
 							type="text"
 							placeholder={"Message"}
-							name={"message"}
+							id="message"
 							required
 						/>
 						<button className={styles.btn}>Submit</button>
