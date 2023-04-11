@@ -31,7 +31,7 @@ export default function Home() {
 					<h2 className={styles.h2}>Welcome</h2>
 					<p className={styles.p}>
 						We are your one-stop destination for all things health, wellness,
-						and aesthetics in West Covina, California. Our mission is to help
+						and aesthetics in Covina, California. Our mission is to help
 						our clients look and feel their best by providing cutting-edge
 						treatments and personalized care.
 					</p>
