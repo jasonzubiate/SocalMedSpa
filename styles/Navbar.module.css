@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1rem 0rem 1rem;
+  padding: 2rem 2rem;
 }
 .logo {
   width: 130px;
@@ -12,9 +12,37 @@
 }
 .btn {
   border: none;
-  background-color: inherit;
+  display: none;
+	cursor: pointer;
+	background-color: transparent;
 }
-.icon {
-  width: 2rem;
-  height: 2rem;
+.navlinks {
+  display: flex;
+  gap: 2rem;
+}
+.navlink, .navlink:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  padding: .5rem 1rem;
+  border-radius: 20px;
+}
+.navlink:hover {
+  background-color: rgb(238, 238, 238);
+}
+@media screen and (max-width: 640px) {
+  .nav {
+    height: 6rem;
+    padding: 0 1rem;
+  }
+  .logo {
+    width: 115px;
+    height: 70px;
+  }
+  .btn {
+    display: flex;
+  }
+  .navlinks {
+    display: none;
+  }
 }
