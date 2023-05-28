@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import promoimg from "@/public/assets/img/promo.jpeg";
+import promoimg from "@/public/assets/img/promo.png";
 import { useRef } from "react";
 import igicon from "@/public/assets/icons/instagram.png";
 import emailjs from "@emailjs/browser";
