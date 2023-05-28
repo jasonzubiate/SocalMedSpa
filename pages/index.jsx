@@ -76,12 +76,12 @@ export default function Home() {
 					</p>
 				</div>
 				<div className={styles.section}>
-					<h2 className={styles.h2}>Mega Sale</h2>
+					{/* <h2 className={styles.h2}>Mega Sale</h2>
 					<Image
 						className={styles["img-large"]}
 						src={promoimg}
 						alt={"Mega Sale"}
-					/>
+					/> */}
 				</div>
 				<div className={styles.section}>
 					<h2 className={styles.h2}>Request A Booking</h2>

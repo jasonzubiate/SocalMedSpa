@@ -17,9 +17,9 @@ export default function Navbar({ toggle, setMenuToggle }) {
 				<Link className={styles.navlink} href={"/"}>
 					Home
 				</Link>
-				<Link className={styles.navlink} href={"/services"}>
+				{/* <Link className={styles.navlink} href={"/services"}>
 					Services
-				</Link>
+				</Link> */}
 			</div>
 			<button
 				className={styles.btn}
