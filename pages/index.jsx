@@ -94,14 +94,14 @@ export default function Home() {
 							className={styles.input}
 							type="text"
 							placeholder={"Full Name"}
-							id="fullName"
+							name="fullName"
 							required
 						/>
 						<input
 							className={styles.input}
 							type="email"
 							placeholder={"Email Address"}
-							id="email"
+							name="email"
 							required
 						/>
 						<input
@@ -115,7 +115,7 @@ export default function Home() {
 							className={styles.input}
 							type="text"
 							placeholder={"Message"}
-							id="message"
+							name="message"
 							required
 						/>
 						<button className={styles.btn}>Submit</button>
