@@ -41,7 +41,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.hero}>
 					<h1 className={styles.h1}>
-						Boost Your Natural Beauty At The Top Med Spa In West Covina
+						Boost Your Natural Beauty At The Top Med Spa In Covina
 					</h1>
 					<button className={styles.btn} onClick={scrollToRef}>
 						Book Now
