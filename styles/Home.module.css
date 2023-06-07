@@ -4,7 +4,6 @@
 	gap: 4.5rem;
 }
 .hero {
-	/* height: 50px; */
 	background-image: url("../public/assets/img/hero.jpg");
 	background-size: cover;
 	background-position: center;
@@ -19,12 +18,12 @@
 }
 
 .h1 {
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	font-weight: normal;
 	color: var(--OFFWHITE);
 	letter-spacing: .05rem;
 	margin-bottom: 24px;
-	font-size: 3rem;
 }
 .btn {
 	background-color: var(--DARKPINK);
@@ -84,28 +83,6 @@
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 }
-.form {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 1rem;
-	align-items: center;
-}
-.input {
-	border: 1px solid var(--DARKGREY);
-	height: 40px;
-	width: 100%;
-	padding: 15px 10px;
-	border-radius: 5px;
-}
-.input,
-.input::placeholder {
-	font: inherit;
-	color: var(--LIGHTGREY);
-}
-.input::placeholder {
-	color: #525151;
-}
 .link, .link:visited {
 	color: inherit;
 	text-decoration: none;
@@ -121,10 +98,14 @@
 }
 @media screen and (min-width: 690px) {
 	.h1 {
-		font-size: 28px;
+		font-size: 4rem
 	}
 	.h2 {
-		font-size: 26px;
+		font-size: 2rem;
+		margin: auto;
+	}
+	.h3 {
+		font-size: 24px;
 	}
 	.p {
 		font-size: 16px;
@@ -139,7 +120,7 @@
 		margin: auto;
 	}
 	.hero {
-		height: 80vh;
+		height: clamp(600px, 70vh, 800px);
 	}
 	.hr {
 		width: 25%;

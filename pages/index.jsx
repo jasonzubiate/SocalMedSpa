@@ -1,34 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import igicon from "@/public/assets/icons/instagram.png";
-import emailjs from "@emailjs/browser";
+import Form from "components/common/Form.jsx"
+import {gsap} from "gsap"
+
 
 export default function Home() {
-	const ref = useRef(null);
+	const formRef = useRef(null);
+	const herRef = useRef(null);
 	const scrollToRef = () => ref.current.scrollIntoView({ behavior: "smooth" });
-	const sendEmail = (e) => {
-		e.preventDefault();
-
-		emailjs
-			.sendForm(
-				"service_9efmxmg",
-				"template_tojkqmu",
-				e.target,
-				"rwOAXyAKAo4ZTTkGO"
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-				},
-				(error) => {
-					console.log(error.text);
-				}
-			);
-		e.target.reset();
-		setSubmitted(true);
-	};
+	
+	useEffect(() => {
+		
+	})
 
 	return (
 		<>
@@ -74,45 +60,10 @@ export default function Home() {
 						healthier, more beautiful you!
 					</p>
 				</div>
-				<div className={styles.section}>
+				<div className={styles.section} ref={formRef}>
 					<h3 className={styles.h3}>Request A Booking</h3>
 					<hr className={styles.hr} />
-					<form
-						className={styles.form}
-						action=""
-						onSubmit={sendEmail}
-						ref={ref}
-					>
-						<input
-							className={styles.input}
-							type="text"
-							placeholder={"Full Name"}
-							name="fullName"
-							required
-						/>
-						<input
-							className={styles.input}
-							type="email"
-							placeholder={"Email Address"}
-							name="email"
-							required
-						/>
-						<input
-							className={styles.input}
-							type="tel"
-							placeholder={"Phone Number"}
-							name="phone"
-							required
-						/>
-						<input
-							className={styles.input}
-							type="text"
-							placeholder={"Message"}
-							name="message"
-							required
-						/>
-						<button className={styles.btn}>Submit</button>
-					</form>
+					<Form/>
 				</div>
 				<div className={`${styles["section"]} ${styles["info"]}`}>
 					<a className={styles.link} href="tel:+1-626-498-7631">

@@ -1,10 +1,14 @@
 .nav {
-  height: 100px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 0 3rem;
+}
+.logo {
+  width: 64px;
+  height: auto;
 }
 .menu {
   border: none;
@@ -14,25 +18,25 @@
 }
 .navlinks {
   display: flex;
-  gap: 1rem;
+  gap: 12px;
 }
 .navlink_a, .navlink_a:visited, .navlink_b, .navlink_b:visited, .nav_cta {
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
-  font-size: 20px;
-  border-radius: 50px;
-  transition: var(--TRANS);
+  font-size: 18px;
 }
 .navlink_b, .nav_cta {
-  padding: 10px 20px;
+  border-radius: 50px;
+  transition: var(--TRANS);
+  padding: .5rem 1rem
 }
 .nav_cta {
   background-color: var(--DARKPINK);
+  border: 2px solid var(--BLACK);
 }
 .navlink_b:hover, .nav_cta:hover {
-  background-color: #E3E1E1;
-  border: 2px solid var(--BLACK);
+  background-color: #e8e8e8;
 }
 
 @media screen and (max-width: 640px) {
