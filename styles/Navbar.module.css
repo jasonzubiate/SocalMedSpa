@@ -1,16 +1,12 @@
 .nav {
-  height: 140px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
+  padding: 2rem 3rem;
 }
-.logo {
-  width: 130px;
-  height: 80px;
-}
-.btn {
+.menu {
   border: none;
   display: none;
 	cursor: pointer;
@@ -18,18 +14,27 @@
 }
 .navlinks {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
-.navlink, .navlink:visited {
+.navlink_a, .navlink_a:visited, .navlink_b, .navlink_b:visited, .nav_cta {
   text-decoration: none;
+  text-transform: uppercase;
   color: inherit;
   font-size: 20px;
-  padding: .5rem 1rem;
-  border-radius: 20px;
+  border-radius: 50px;
+  transition: var(--TRANS);
 }
-.navlink:hover {
-  background-color: rgb(238, 238, 238);
+.navlink_b, .nav_cta {
+  padding: 10px 20px;
 }
+.nav_cta {
+  background-color: var(--DARKPINK);
+}
+.navlink_b:hover, .nav_cta:hover {
+  background-color: #E3E1E1;
+  border: 2px solid var(--BLACK);
+}
+
 @media screen and (max-width: 640px) {
   .nav {
     height: 6rem;
@@ -39,7 +44,7 @@
     width: 115px;
     height: 70px;
   }
-  .btn {
+  .menu {
     display: flex;
   }
   .navlinks {

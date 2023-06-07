@@ -3,16 +3,12 @@ import Footer from "@/components/common/Footer";
 import HamburgerMenu from "./HamburgerMenu"
 import { useState } from "react";
 
-type LayoutProps = {
-	children: React.ReactNode;
-};
-
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({scrollToRef, children }) {
 	const [menuToggle, setMenuToggle] = useState(false);
 
 	return (
 		<div>
-			<Navbar toggle={menuToggle} setMenuToggle={setMenuToggle} />
+			<Navbar toggle={menuToggle} setMenuToggle={setMenuToggle} scrollToRef={scrollToRef}/>
       {menuToggle && <HamburgerMenu setToggle={setMenuToggle}/>}
 			{children}
 			<Footer />

@@ -1,28 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/assets/img/Logo.jpg";
 import Menu from "@/public/assets/img/menu.png";
 import styles from "@/styles/Navbar.module.css";
 import close from "@/public/assets/icons/close.png";
 
-export default function Navbar({ toggle, setMenuToggle }) {
+export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
 	return (
 		<nav className={styles.nav}>
-			<div>
-				<Link href={"/"}>
-					<Image className={styles.logo} src={Logo} alt="Home" />
-				</Link>
-			</div>
+			<>
+				<Link className={styles.navlink_a} href={"/"}>So Cal Beauty Med Spa</Link>
+			</>
 			<div className={styles.navlinks}>
-				<Link className={styles.navlink} href={"/"}>
+				<Link className={styles.navlink_b} href={"/"}>
 					Home
 				</Link>
-				{/* <Link className={styles.navlink} href={"/services"}>
+				<Link className={styles.navlink_b} href={"/services"}>
 					Services
-				</Link> */}
+				</Link>
+				<button className={styles.nav_cta} onClick={scrollToRef}>
+					Book Now
+				</button>
 			</div>
 			<button
-				className={styles.btn}
+				className={styles.menu}
 				onClick={() => {
 					setMenuToggle(!toggle);
 				}}

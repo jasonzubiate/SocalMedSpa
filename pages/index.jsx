@@ -41,14 +41,15 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.hero}>
 					<h1 className={styles.h1}>
-						Boost Your Natural Beauty At The Top Med Spa In Covina
+						Boost Your Natural Beauty
 					</h1>
 					<button className={styles.btn} onClick={scrollToRef}>
 						Book Now
 					</button>
 				</div>
+				<h2 className={styles.h2}>Indulge in Elite Med Spa Services at Covina's Premier Destination.</h2>
 				<div className={`${styles["section"]} ${styles["logo-bg"]}`}>
-					<h2 className={styles.h2}>Welcome</h2>
+					<h3 className={styles.h3}>About Us</h3>
 					<p className={styles.p}>
 						We are your one-stop destination for all things health, wellness,
 						and aesthetics in Covina, California. Our mission is to help our
@@ -74,15 +75,7 @@ export default function Home() {
 					</p>
 				</div>
 				<div className={styles.section}>
-					{/* <h2 className={styles.h2}>Mega Sale</h2>
-					<Image
-						className={styles["img-large"]}
-						src={promoimg}
-						alt={"Mega Sale"}
-					/> */}
-				</div>
-				<div className={styles.section}>
-					<h2 className={styles.h2}>Request A Booking</h2>
+					<h3 className={styles.h3}>Request A Booking</h3>
 					<hr className={styles.hr} />
 					<form
 						className={styles.form}
