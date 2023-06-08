@@ -21,7 +21,6 @@ export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
 
     tl.to(navRef.current, {
       height: desiredHeight,
-      opacity: 1
     });
   }, []);
 

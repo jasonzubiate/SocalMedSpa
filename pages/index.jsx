@@ -17,19 +17,17 @@ export default function Home() {
 			defaults: {
 				ease: "power2",
 				duration: 2,
-				delay: 0.1,
 			},
 		});
 		tl.to(heroRef.current, {
-			duration: 1.5,
 			clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 		}).to(
 			h1Ref.current,
 			{
-				duration: 1.2,
+				duration: 1.4,
 				y: 0,
 			},
-			"-=.8"
+			"-=1"
 		);
 	});
 
@@ -44,7 +42,9 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.hero} ref={heroRef}>
 					<div className="mask">
-						<h1 className={styles.h1} ref={h1Ref}>Boost Your Natural Beauty</h1>
+						<h1 className={styles.h1} ref={h1Ref}>
+							Boost Your Natural Beauty
+						</h1>
 					</div>
 					<button className={styles.btn} onClick={scrollToRef}>
 						Book Now
@@ -84,28 +84,37 @@ export default function Home() {
 					<hr className={styles.hr} />
 					<Form />
 				</div>
-				<div className={`${styles["section"]} ${styles["info"]}`}>
-					<a className={styles.link} href="tel:+1-626-498-7631">
-						626-498-7631
-					</a>
-					<a className={styles.link} href="mailto:socalbeautymedspa@gmail.com">
-						socalbeautymedspa@gmail.com
-					</a>
-					<a
-						className={styles.link}
-						href="https://www.google.com/maps/search/?api=1&query=164+W+Badillo+St.%2C+Covina%2C+CA+91723"
-					>
-						164 W Badillo St.
-					</a>
-					<a
-						className={styles.link}
-						href="https://www.google.com/maps/search/?api=1&query=164+W+Badillo+St.%2C+Covina%2C+CA+91723"
-					>
-						Covina, CA 91723
-					</a>
-					<a href="https://www.instagram.com/socalbeautymedspa/">
-						<Image className={styles.icon} src={igicon} alt="instagram" />
-					</a>
+				<div className={styles.section}>
+					<div className={styles.info}>
+						<div className={styles.address}>
+							<a
+								className={styles.link}
+								href="https://www.google.com/maps/search/?api=1&query=164+W+Badillo+St.%2C+Covina%2C+CA+91723"
+							>
+								164 W Badillo St.
+							</a>
+							<a
+								className={styles.link}
+								href="https://www.google.com/maps/search/?api=1&query=164+W+Badillo+St.%2C+Covina%2C+CA+91723"
+							>
+								Covina, CA 91723
+							</a>
+						</div>
+						<a
+							className={styles.link}
+							href="mailto:socalbeautymedspa@gmail.com"
+						>
+							socalbeautymedspa@gmail.com
+						</a>
+						<a className={styles.link} href="tel:+1-626-498-7631">
+							626-498-7631
+						</a>
+					</div>
+					<div className={styles.info}>
+						<a href="https://www.instagram.com/socalbeautymedspa/">
+							<Image className={styles.icon} src={igicon} alt="instagram" />
+						</a>
+					</div>
 				</div>
 			</main>
 		</>

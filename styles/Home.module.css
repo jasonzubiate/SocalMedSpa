@@ -1,7 +1,7 @@
 .main {
 	display: flex;
 	flex-direction: column;
-	gap: 4.5rem;
+	gap: 3.5rem;
 }
 .hero {
 	background-image: url("../public/assets/img/hero.jpg");
@@ -10,11 +10,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
-	align-items: center;
 	justify-content: center;
 	margin: 0 3rem;
 	border-radius: 60px;
+	transition: var(--TRANS);
 }
 
 .h1 {
@@ -90,13 +89,23 @@
 	text-decoration: none;
 }
 .info {
+	color: var(--BLACK);
 	display: flex;
 	gap: .25rem;
+	font-weight: 500;
 }
 .icon {
 	margin-top: 1rem;
 	width: 32px;
 	height: 32px;
+}
+.address {
+	display: flex;
+	flex-direction: column;
+}
+.icon {
+	width: 4rem;
+	height: 4rem;
 }
 @media screen and (min-width: 690px) {
 	.hero {
@@ -123,6 +132,7 @@
 	.section {
 		width: 50%;
 		margin: auto;
+		margin-bottom: 2rem;
 	}
 	.hero {
 		height: clamp(600px, 80vh, 800px);
@@ -132,6 +142,13 @@
 	}
 	.form {
 		width: 70%;
+	}
+	.info {
+		font-size: 20px;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
 	}
 }
 @media screen and (min-width: 1080px) {

@@ -1,7 +1,7 @@
 .footer {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--DARKGREY);
+	background-color: var(--BLACK);
 	height: 140px;
   color: var(--OFFWHITE);
   justify-content: center;
@@ -17,10 +17,10 @@
 }
 @media screen and (min-width: 1080px) {
   .footer {
-    height: 4rem;
+    font-size: 20px;
+    height: 80px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
   }
 }

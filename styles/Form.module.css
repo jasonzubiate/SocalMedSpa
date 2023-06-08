@@ -9,13 +9,13 @@
 	width: 70%;
 	padding: 1rem 0rem 1.5rem 0rem;
 	border: none;
-	border-bottom: solid 0.2rem var(--DARKGREY);
+	border-bottom: solid 0.2rem var(--LIGHTGREY);
 	background-color: transparent;
 }
 .input,
 .input::placeholder {
 	font: inherit;
-	color: var(--DARKGREY);
+	color: var(--LIGHTGREY);
 	font-size: 20px;
 	font-weight: 500;
 }
@@ -25,7 +25,6 @@
 	background-position: 0 0;
 }
 .btn {
-	width: 30%;
 	background-color: var(--DARKPINK);
 	padding: 15px 20px;
 	color: var(--OFFWHITE);
