@@ -3,18 +3,35 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useRef } from "react";
 import igicon from "@/public/assets/icons/instagram.png";
-import Form from "components/common/Form.jsx"
-import {gsap} from "gsap"
-
+import Form from "components/common/Form.jsx";
+import { gsap } from "gsap";
 
 export default function Home() {
 	const formRef = useRef(null);
-	const herRef = useRef(null);
+	const heroRef = useRef(null);
+	const h1Ref = useRef(null);
 	const scrollToRef = () => ref.current.scrollIntoView({ behavior: "smooth" });
-	
+
 	useEffect(() => {
-		
-	})
+		let tl = gsap.timeline({
+			defaults: {
+				ease: "power2",
+				duration: 2,
+				delay: 0.1,
+			},
+		});
+		tl.to(heroRef.current, {
+			duration: 1.5,
+			clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+		}).to(
+			h1Ref.current,
+			{
+				duration: 1.2,
+				y: 0,
+			},
+			"-=.8"
+		);
+	});
 
 	return (
 		<>
@@ -25,15 +42,17 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<div className={styles.hero}>
-					<h1 className={styles.h1}>
-						Boost Your Natural Beauty
-					</h1>
+				<div className={styles.hero} ref={heroRef}>
+					<div className="mask">
+						<h1 className={styles.h1} ref={h1Ref}>Boost Your Natural Beauty</h1>
+					</div>
 					<button className={styles.btn} onClick={scrollToRef}>
 						Book Now
 					</button>
 				</div>
-				<h2 className={styles.h2}>Indulge in Elite Med Spa Services at Covina's Premier Destination.</h2>
+				<h2 className={styles.h2}>
+					Indulge in Elite Med Spa Services at Covina's Premier Destination.
+				</h2>
 				<div className={`${styles["section"]} ${styles["logo-bg"]}`}>
 					<h3 className={styles.h3}>About Us</h3>
 					<p className={styles.p}>
@@ -63,7 +82,7 @@ export default function Home() {
 				<div className={styles.section} ref={formRef}>
 					<h3 className={styles.h3}>Request A Booking</h3>
 					<hr className={styles.hr} />
-					<Form/>
+					<Form />
 				</div>
 				<div className={`${styles["section"]} ${styles["info"]}`}>
 					<a className={styles.link} href="tel:+1-626-498-7631">

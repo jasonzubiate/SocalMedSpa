@@ -24,17 +24,19 @@
 	color: var(--OFFWHITE);
 	letter-spacing: .05rem;
 	margin-bottom: 24px;
+	transform: translateY(-100%);
 }
 .btn {
 	background-color: var(--DARKPINK);
-	padding: 15px 20px;
 	color: var(--OFFWHITE);
+	width: 60px;
+	height: 60px;
 	border: none;
 	text-transform: uppercase;
 	font-size: 14px;
-	border-radius: 50px;
 	transition: var(--TRANS);
 	cursor: pointer;
+	border-radius: 100%;
 }
 .btn:hover, .btn:active {
 	background-color: #312b2b;
@@ -97,8 +99,11 @@
 	height: 32px;
 }
 @media screen and (min-width: 690px) {
+	.hero {
+		clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+	}
 	.h1 {
-		font-size: 4rem
+		font-size: 4rem;
 	}
 	.h2 {
 		font-size: 2rem;
@@ -108,19 +113,19 @@
 		font-size: 24px;
 	}
 	.p {
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.btn {
 		font-size: 16px;
-		padding: 15px 20px;
-		border-radius: 30px;
+		width: 100px;
+		height: 100px;
 	}
 	.section {
 		width: 50%;
 		margin: auto;
 	}
 	.hero {
-		height: clamp(600px, 70vh, 800px);
+		height: clamp(600px, 80vh, 800px);
 	}
 	.hr {
 		width: 25%;

@@ -4,10 +4,29 @@ import Menu from "@/public/assets/img/menu.png";
 import styles from "@/styles/Navbar.module.css";
 import close from "@/public/assets/icons/close.png";
 import logo from "@/public/assets/img/logo.jpg";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
+
 
 export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    let tl = gsap.timeline({
+      defaults: { ease: "power2", duration: 1.5, delay: 0.3 },
+    });
+
+    const viewportWidth = window.innerWidth;
+    const desiredHeight = viewportWidth >= 768 ? 100 : 64;
+
+    tl.to(navRef.current, {
+      height: desiredHeight,
+      opacity: 1
+    });
+  }, []);
+
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} ref={navRef}>
       <>
         <Link className={styles.navlink_a} href={"/"}>
           So Cal Beauty Med Spa
