@@ -8,9 +8,8 @@
 	overflow: hidden;
 	transition: var(--TRANS);
 }
-.logo {
-	width: 64px;
-	height: auto;
+.logo_container {
+	display: none;
 }
 .menu {
 	border: none;
@@ -49,16 +48,22 @@
 
 @media screen and (max-width: 640px) {
 	.nav {
-		padding: 0 1rem;
+		padding: 0 1rem 0 .5rem;
+	}
+	.logo_container {
+		display: flex;
 	}
 	.logo {
-		width: 115px;
-		height: 70px;
+		width: 100px;
+		height: 50px;
 	}
 	.menu {
 		display: flex;
 	}
 	.navlinks {
+		display: none;
+	}
+	.navlink_a {
 		display: none;
 	}
 }

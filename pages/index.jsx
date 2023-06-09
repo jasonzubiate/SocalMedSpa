@@ -6,8 +6,7 @@ import igicon from "@/public/assets/icons/instagram.png";
 import Form from "components/common/Form.jsx";
 import { gsap } from "gsap";
 
-export default function Home() {
-	const formRef = useRef(null);
+export default function Home({ formRef }) {
 	const heroRef = useRef(null);
 	const h1Ref = useRef(null);
 	const scrollToRef = () => ref.current.scrollIntoView({ behavior: "smooth" });

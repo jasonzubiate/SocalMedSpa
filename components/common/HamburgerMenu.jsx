@@ -13,7 +13,7 @@ export default function HamburgerMenu({ setToggle }) {
 			>
 				Home
 			</Link>
-			<Link
+			{/* <Link
 				className={styles.link}
 				href={"/services"}
 				onClick={() => {
@@ -21,7 +21,7 @@ export default function HamburgerMenu({ setToggle }) {
 				}}
 			>
 				Services
-			</Link>
+			</Link> */}
 		</nav>
 	);
 }
