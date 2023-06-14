@@ -10,24 +10,24 @@ export default function Home({ formRef, scrollToRef }) {
   const heroRef = useRef(null);
   const h1Ref = useRef(null);
 
-  // useEffect(() => {
-  //   let tl = gsap.timeline({
-  //     defaults: {
-  //       ease: "power2",
-  //       duration: 2,
-  //     },
-  //   });
-  //   tl.to(heroRef.current, {
-  //     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-  //   }).to(
-  //     h1Ref.current,
-  //     {
-  //       duration: 1.4,
-  //       y: 0,
-  //     },
-  //     "-=1"
-  //   );
-  // });
+  useEffect(() => {
+    let tl = gsap.timeline({
+      defaults: {
+        ease: "power2",
+        duration: 2,
+      },
+    });
+    tl.to(heroRef.current, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    }).to(
+      h1Ref.current,
+      {
+        duration: 1.4,
+        y: 0,
+      },
+      "-=1"
+    );
+  });
 
   return (
     <>

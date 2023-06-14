@@ -10,18 +10,18 @@ import { useEffect, useRef } from "react";
 export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
 	const navRef = useRef(null);
 
-	// useEffect(() => {
-	// 	let tl = gsap.timeline({
-	// 		defaults: { ease: "power2", duration: 1.5, delay: 0.3 },
-	// 	});
+	useEffect(() => {
+		let tl = gsap.timeline({
+			defaults: { ease: "power2", duration: 1.5, delay: 0.3 },
+		});
 
-	// 	const viewportWidth = window.innerWidth;
-	// 	const desiredHeight = viewportWidth >= 768 ? 100 : 64;
+		const viewportWidth = window.innerWidth;
+		const desiredHeight = viewportWidth >= 768 ? 100 : 64;
 
-	// 	tl.to(navRef.current, {
-	// 		height: desiredHeight,
-	// 	});
-	// }, []);
+		tl.to(navRef.current, {
+			height: desiredHeight,
+		});
+	}, []);
 
 	return (
 		<nav className={styles.nav} ref={navRef}>
