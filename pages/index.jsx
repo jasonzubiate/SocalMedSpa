@@ -49,7 +49,7 @@ export default function Home({ formRef, scrollToRef }) {
           </button>
         </div>
         <h2 className={styles.h2}>
-          Indulge in Elite Med Spa Services at Covina's Premier Destination.
+          Indulge in Elite Med Spa Services at Covina&aspos;s Premier Destination.
         </h2>
         <div className={`${styles["section"]} ${styles["logo-bg"]}`}>
           <h3 className={styles.h3}>About Us</h3>
