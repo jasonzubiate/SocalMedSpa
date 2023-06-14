@@ -3,7 +3,7 @@ import Footer from "@/components/common/Footer";
 import HamburgerMenu from "./HamburgerMenu"
 import { useState } from "react";
 
-export default function Layout({scrollToRef, children }) {
+export default function Layout({ children, scrollToRef }) {
 	const [menuToggle, setMenuToggle] = useState(false);
 
 	return (
