@@ -1,5 +1,5 @@
 .nav {
-	height: 0px;
+	height: 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -48,6 +48,7 @@
 
 @media screen and (max-width: 640px) {
 	.nav {
+		height: 4rem;
 		padding: 0 1rem 0 .5rem;
 	}
 	.logo_container {
