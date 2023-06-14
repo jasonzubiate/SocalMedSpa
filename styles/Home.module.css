@@ -23,6 +23,7 @@
 	letter-spacing: 0.05rem;
 	margin-bottom: 24px;
 	transform: translateY(-100%);
+	text-align: center;
 }
 .btn {
 	background-color: var(--DARKPINK);
@@ -30,10 +31,11 @@
 	padding: 15px 20px;
 	border: none;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 12px;
 	transition: var(--TRANS);
 	cursor: pointer;
 	border-radius: 50px;
+	opacity: 0;
 }
 .btn:hover,
 .btn:active {
@@ -135,7 +137,7 @@
 		font-size: 18px;
 	}
 	.btn {
-		font-size: 18px;
+		font-size: 20px;
 
 	}
 	.section {
