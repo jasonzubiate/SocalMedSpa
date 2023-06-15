@@ -16,7 +16,7 @@ export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
 		});
 
 		const viewportWidth = window.innerWidth;
-		const desiredHeight = viewportWidth >= 768 ? 105 : 64;
+		const desiredHeight = viewportWidth >= 768 ? 100 : 64;
 
 		tl.to(navRef.current, {
 			height: desiredHeight,
