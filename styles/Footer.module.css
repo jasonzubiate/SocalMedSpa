@@ -1,0 +1,26 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--BLACK);
+	height: 140px;
+  color: var(--OFFWHITE);
+  justify-content: center;
+  padding: 1rem;
+  gap: .5rem;
+}
+.a, .a:visited {
+  color: var(--OFFWHITE);
+  text-decoration: none;
+}
+.no_wrap {
+  white-space: nowrap;
+}
+@media screen and (min-width: 1080px) {
+  .footer {
+    font-size: 20px;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
