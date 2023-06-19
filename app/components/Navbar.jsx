@@ -4,7 +4,7 @@ import Link from "next/link";
 import Menu from "@/public/assets/img/menu.png";
 import styles from "@/app/styles/Navbar.module.css";
 import close from "@/public/assets/icons/close.png";
-import logo from "@/public/assets/img/logo.jpg";
+import logo from "@/public/assets/img/Logo.jpg";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
