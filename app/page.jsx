@@ -2,7 +2,7 @@
 import Head from "next/head.js";
 import { useEffect, useRef, useClient } from "react";
 import Image from "next/image";
-import styles from "@/app/styles/home.module.css"
+import styles from "@/app/styles/Home.module.css"
 import igicon from "@/public/assets/icons/instagram.png";
 import Form from "./components/Form.jsx";
 import { gsap } from "gsap";
