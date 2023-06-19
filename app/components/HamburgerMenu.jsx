@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/HamburgerMenu.module.css";
+import styles from "@/app/styles/HamburgerMenu.module.css";
 
 export default function HamburgerMenu({ setToggle }) {
 	return (

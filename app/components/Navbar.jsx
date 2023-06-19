@@ -1,7 +1,8 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "@/public/assets/img/menu.png";
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/app/styles/Navbar.module.css";
 import close from "@/public/assets/icons/close.png";
 import logo from "@/public/assets/img/logo.jpg";
 import { gsap } from "gsap";
