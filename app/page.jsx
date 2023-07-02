@@ -1,13 +1,16 @@
 "use client"
 import Head from "next/head.js";
-import { useEffect, useRef, useClient } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "@/app/styles/Home.module.css"
 import igicon from "@/public/assets/icons/instagram.png";
 import Form from "./components/Form.jsx";
 import { gsap } from "gsap";
 
-export default function Home({ formRef, scrollToRef }) {
+export default function Home() {
+	const formRef = useRef(null);
+  const scrollToRef = () =>
+    formRef.current.scrollIntoView({ behavior: "smooth" });
 	const heroRef = useRef(null);
 	const h1Ref = useRef(null);
 	const btnRef = useRef(null);

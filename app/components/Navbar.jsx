@@ -6,10 +6,12 @@ import styles from "@/app/styles/Navbar.module.css";
 import close from "@/public/assets/icons/close.png";
 import logo from "@/public/assets/img/Logo.jpg";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import HamburgerMenu from "./HamburgerMenu";
 
-export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
+export default function Navbar() {
   const navRef = useRef(null);
+  const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
     let tl = gsap.timeline({
@@ -25,53 +27,56 @@ export default function Navbar({ toggle, setMenuToggle, scrollToRef }) {
   }, []);
 
   return (
-    <nav className={styles.nav} ref={navRef}>
-      <>
-        <Link className={styles.logo_container} href={"/"}>
-          <Image className={styles.logo} src={logo} />
-        </Link>
-        <Link className={styles.navlink_a} href={"/"}>
-          So Cal Beauty Med Spa
-        </Link>
-      </>
-      <div className={styles.navlinks}>
-        <Link className={styles.navlink_b} href={"/"}>
-          Home
-        </Link>
-        {/* <Link className={styles.navlink_b} href={"/services"}>
+    <>
+      <nav className={styles.nav} ref={navRef}>
+        <>
+          <Link className={styles.logo_container} href={"/"}>
+            <Image className={styles.logo} src={logo} />
+          </Link>
+          <Link className={styles.navlink_a} href={"/"}>
+            So Cal Beauty Med Spa
+          </Link>
+        </>
+        <div className={styles.navlinks}>
+          <Link className={styles.navlink_b} href={"/"}>
+            Home
+          </Link>
+          {/* <Link className={styles.navlink_b} href={"/services"}>
 					Services
 				</Link> */}
-        <button className={styles.nav_cta} onClick={scrollToRef}>
-          Book Now
+          {/* <button className={styles.nav_cta} onClick={scrollToRef}>
+            Book Now
+          </button> */}
+        </div>
+        <button
+          className={styles.menu}
+          onClick={() => {
+            setMenuToggle(!menuToggle);
+          }}
+        >
+          {!menuToggle && (
+            <Image
+              className={styles.menu}
+              src={Menu}
+              alt={"Menu"}
+              width={24}
+              height={24}
+              quality={100}
+            />
+          )}
+          {menuToggle && (
+            <Image
+              className={styles.menu}
+              src={close}
+              alt={"Menu"}
+              width={20}
+              height={20}
+              quality={100}
+            />
+          )}
         </button>
-      </div>
-      <button
-        className={styles.menu}
-        onClick={() => {
-          setMenuToggle(!toggle);
-        }}
-      >
-        {!toggle && (
-          <Image
-            className={styles.menu}
-            src={Menu}
-            alt={"Menu"}
-            width={24}
-            height={24}
-            quality={100}
-          />
-        )}
-        {toggle && (
-          <Image
-            className={styles.menu}
-            src={close}
-            alt={"Menu"}
-            width={20}
-            height={20}
-            quality={100}
-          />
-        )}
-      </button>
-    </nav>
+      </nav>
+     {menuToggle && <HamburgerMenu setToggle={menuToggle} />}
+    </>
   );
 }
