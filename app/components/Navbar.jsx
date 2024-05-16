@@ -4,7 +4,7 @@ import Link from "next/link";
 import Menu from "../../public/assets/img/menu.png";
 import styles from "../styles/Navbar.module.css";
 import close from "../../public/assets/icons/close.png";
-import logo from "../../public/assets/img/logo.jpg";
+import logo from "../../public/assets/img/spaLogo.png";
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
@@ -76,7 +76,7 @@ export default function Navbar() {
           )}
         </button>
       </nav>
-     {menuToggle && <HamburgerMenu setToggle={menuToggle} />}
+      {menuToggle && <HamburgerMenu setToggle={menuToggle} />}
     </>
   );
 }
