@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import styles from "@/app/styles/Form.module.css"
+import styles from "../styles/Form.module.css"
 export default function Form() {
   const sendEmail = (e) => {
 		e.preventDefault();

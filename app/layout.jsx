@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import LenisContext from "@/context/LenisContext";
+import LenisContext from "../context/lenis-context";
 
 export const metadata = {
   title: "So Cal Beauty Med Spa",
@@ -12,14 +12,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LenisContext>
-      <html lang="en">
-        <body className="main">
+    <html lang="en">
+      <body className="main">
+        <LenisContext>
           <Navbar />
           {children}
           <Footer />
-        </body>
-      </html>
-    </LenisContext>
+        </LenisContext>
+      </body>
+    </html>
   );
 }
