@@ -1,11 +1,12 @@
 "use client";
 import Head from "next/head.js";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./styles/Home.module.css";
 import igicon from "../public/assets/img/instagram.png";
 import Form from "./components/Form.jsx";
 import { gsap } from "gsap";
+import Link from "next/link.js";
 
 export default function Home() {
   const formRef = useRef(null);
@@ -58,9 +59,14 @@ export default function Home() {
               Boost Your Natural Beauty
             </h1>
           </div>
-          <button className={styles.btn} onClick={scrollToRef} ref={btnRef}>
+          <Link
+            className={styles.btn}
+            ref={btnRef}
+            href={"https://www.vagaro.com/socalbeautymedspa"}
+            target="_blank"
+          >
             Book Now
-          </button>
+          </Link>
         </div>
         <h2 className={styles.h2}>
           Indulge in Elite Med Spa Services at Covina&apos;s Premier
@@ -93,7 +99,7 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.section} ref={formRef}>
-          <h3 className={styles.h3}>Request A Booking</h3>
+          <h3 className={styles.h3}>Send A Message</h3>
           <hr className={styles.hr} />
           <Form />
         </div>
@@ -115,10 +121,7 @@ export default function Home() {
           <a className={styles.link} href="mailto:socalbeautymedspa@gmail.com">
             socalbeautymedspa@gmail.com
           </a>
-          <a
-            className={styles.link}
-            href="tel:+1-626-498-7631"
-          >
+          <a className={styles.link} href="tel:+1-626-498-7631">
             626-498-7631
           </a>
         </div>
